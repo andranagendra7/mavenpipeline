@@ -27,6 +27,7 @@ stages {
 	  stage('Test') {
 	     steps {
 		   echo "welcome to Test evironament"
+		    sh 'mvn test'
 		 
 	     }
 	  }
