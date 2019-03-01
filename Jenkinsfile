@@ -34,14 +34,16 @@ stages {
 	 stage('Stage') {
 	     steps {
            	    echo "welcome to Pre-prod evironament"
+		    sh   "mvn cleen"
 		    sh   "mvn install"
 		   } 
 	     }
 	stage('Production') {
 	   steps {
 		 echo "welcome to production evironament"
-		 sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
-		 sh 'sh get-docker.sh'
+		 //sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
+		 //sh 'sh get-docker.sh'
+		 sh 'systemctl start docker'
 		 
 		 } 
 		
