@@ -6,7 +6,7 @@ pipeline {
      
      stages {
          
-           stage('Prodection') {
+           stage('check') {
                steps {
                         echo "Check docker service status"
                         sh 'docker --version'
