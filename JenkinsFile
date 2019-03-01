@@ -10,6 +10,7 @@ pipeline {
                steps {
                         echo "Check docker service status"
                         sh 'docker --version'
+                        sh 'docker build -t httpdimage .'
                       }
                   }
            
@@ -19,6 +20,12 @@ pipeline {
                         sh 'systemctl status docker.service'
                       }
                   }
-           
+          
+           stage('container creation') {
+               steps {
+                        echo "Check docker service status"
+                        sh 'docker run -ti --name jenkinscon1 -p 98:80 httpdimage /bin/bash'
+                      }
+                  }
              }
 }
