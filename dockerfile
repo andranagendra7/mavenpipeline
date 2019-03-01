@@ -8,7 +8,6 @@ EXPOSE 88
 
 RUN service httpd start
 
-CMD 'Docker image created successfully'
 
-ENTRYPOINT echo
 
+ENTRYPOINT /bin/bash
