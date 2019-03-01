@@ -6,11 +6,19 @@ pipeline {
      
      stages {
          
-           stage {
+           stage('Prodection') {
+               steps {
+                        echo "Check docker service status"
+                        sh 'docker --version'
+                      }
+                  }
+           
+           stage('Prodection') {
                steps {
                         echo "Check docker service status"
                         sh 'systemctl status docker.service'
                       }
                   }
+           
              }
 }
