@@ -10,7 +10,7 @@ pipeline {
                steps {
                         echo "Check docker service status"
                         sh 'docker --version'
-                        //sh 'docker build -t httpdimage .'
+                        sh 'docker build -t httpdimage1 .'
                       }
                   }
            
@@ -23,11 +23,11 @@ pipeline {
           
            stage('containercreation') {
                steps {
-                        //echo "Check docker service status"
-                        //sh 'docker run -dti --name jenkinscon1 -p 98:80 httpdimage /bin/bash'
-                        echo "Login into the container and start httpd service"
-                        sh 'docker attach jenkinscon1'
-                        sh 'service httpd start'
+                        echo "Check docker service status"
+                        sh 'docker run -dti --name jenkinscon2 -p 98:80 httpdimage1 /bin/bash'
+                        //echo "Login into the container and start httpd service"
+                        //sh 'docker attach jenkinscon1'
+                        //sh 'service httpd start'
                       }
                   }
              }
