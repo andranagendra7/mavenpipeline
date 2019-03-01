@@ -34,7 +34,7 @@ stages {
 	 stage('Stage') {
 	     steps {
            	    echo "welcome to Pre-prod evironament"
-		    sh   "mvn cleen"
+		    sh   "mvn clean"
 		    sh   "mvn install"
 		   } 
 	     }
