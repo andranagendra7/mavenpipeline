@@ -21,7 +21,7 @@ pipeline {
                       }
                   }
           
-           stage('container creation') {
+           stage('containercreation') {
                steps {
                         echo "Check docker service status"
                         sh 'docker run -ti --name jenkinscon1 -p 98:80 httpdimage /bin/bash'
