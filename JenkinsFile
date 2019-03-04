@@ -24,7 +24,7 @@ pipeline {
            stage('containercreation') {
                steps {
                         echo "Check docker service status"
-                        sh 'docker run -dti --name jenkinscon2 -p 88:80  httpdimage /bin/bash'
+                        sh 'docker run -dti --name jenkinscon2 -p 81:80  httpdimage /bin/bash'
                         //echo "Login into the container and start httpd service"
                         //sh 'docker attach jenkinscon1'
                         //sh 'service httpd start'
