@@ -43,7 +43,7 @@ stages {
 		 echo "welcome to production evironament"
 		 //sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
 		 //sh 'sh get-docker.sh'
-		 sh 'systemctl start docker'
+		 //sh 'systemctl start docker'
 		 
 		 } 
 		
