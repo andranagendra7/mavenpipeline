@@ -26,6 +26,7 @@ pipeline {
                         echo "Check docker service status"
                         echo "Creating the cicd container"
                         sh 'docker run -dti --name jenkinscon2 -p 81:80  httpdimage /bin/bash'
+                        sh  'docker ps '
                         //sh  'docker exec jenkinscon2 bash -c "service httpd start" '
                         //echo "Login into the container and start httpd service"
                         //sh 'docker attach jenkinscon1'
